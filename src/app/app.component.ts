@@ -1,4 +1,6 @@
 import { Component } from '@angular/core';
+import { TodoService } from './todo.service';
+import { EMPTY, Observable, of } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +8,12 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular';
+
+  todoData$:Observable<any>=of(null);
+  
+  constructor(private todoService:TodoService){}
+
+  ngOnInit(){
+    this.todoData$ = this.todoService.todos$;
+  }
 }
