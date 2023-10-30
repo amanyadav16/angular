@@ -1,6 +1,6 @@
 import { Component } from '@angular/core';
 import { TodoService } from './todo.service';
-import { EMPTY, Observable, of } from 'rxjs';
+import { BehaviorSubject, EMPTY, Observable, combineLatest, delay, filter, map, of, tap } from 'rxjs';
 
 @Component({
   selector: 'app-root',
@@ -9,11 +9,16 @@ import { EMPTY, Observable, of } from 'rxjs';
 })
 export class AppComponent {
 
-  todoData$:Observable<any>=of(null);
+  todo$!:Observable<any>;
   
   constructor(private todoService:TodoService){}
 
   ngOnInit(){
-    this.todoData$ = this.todoService.todos$;
+    this.todo$=this.todoService.todo$;
   }
+
+  onButtonClick(id:any){
+    this.todoService.setTodoId(id.value);
+  }
+
 }

@@ -1,10 +1,10 @@
 <h3>Dont use this branch for development, Create a new branch</h3>
-<table *ngIf="todoData$ | async as todos">
-    <tbody>
-        <tr *ngFor="let todo of todos">
-            <td>{{todo.id}}</td>
-            <td>{{todo.title}}</td>
-            <td>{{todo.completed}}</td>
-        </tr>
-    </tbody>
-</table>
+<div>
+  enter ID:  <input type="text" #todoId><br>
+    <button (click)="onButtonClick(todoId)">get todo</button>
+</div><br>
+<div *ngIf="todo$ | async as todo">
+    Todo Id: {{todo.id}} <br> 
+    Todo Title:  {{todo?.title}} <br>
+    Todo Status: {{todo?.completed}}
+</div>
