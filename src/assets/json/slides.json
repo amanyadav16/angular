@@ -1,0 +1,56 @@
+{
+    "HomePageHiglight": [
+        {
+            "storyDeatils": [
+                {
+                    "overview": {
+                        "slides": [
+                            {
+                                "imgage": "image 1"
+                            },
+                            {
+                                "imgage": "image 2"
+                            },
+                            {
+                                "imgage": "image 3"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "Impact": {
+                        "slides": [
+                            {
+                                "imgage": "image 1"
+                            },
+                            {
+                                "imgage": "image 2"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "Scale": {
+                        "slides": [
+                            {
+                                "imgage": "image 1"
+                            }
+                        ]
+                    }
+                },
+                {
+                    "Our Learnings": {
+                        "slides": [
+                            {
+                                "imgage": "image 1"
+                            },
+                            {
+                                "imgage": "image 2"
+                            }
+                        ]
+                    }
+                }
+            ]
+        }
+    ]
+}

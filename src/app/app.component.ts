@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { StoryService } from './story.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,14 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'angular';
+
+  storyData:any;
+  
+  constructor(private storyService:StoryService){}
+
+  ngOnInit(){
+    this.storyService.getStoriesData().subscribe((res:any)=>{
+      this.storyData=res;
+    })
+  }
 }
